@@ -55,8 +55,9 @@ onSubmit(values) {
 }
 
 componentDidMount() {
-
-    if (this.state.id === -1) {
+    console.log("componentDidMount todo component"+this.state.id)
+    if (this.state.id === "-1") {
+        console.log("11111111111")
         return
     }
 

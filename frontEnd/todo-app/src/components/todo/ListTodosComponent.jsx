@@ -91,7 +91,7 @@ class ListTodosComponent extends Component {
         return <div>
                     <h1>List todos</h1>
                     {this.state.message && <div className="alert alert-success">{this.state.message}</div>}
-                    <div className="container">
+                    <div className="container-fluid">
                     <table className="table">
                         <thead>
                             <tr>
