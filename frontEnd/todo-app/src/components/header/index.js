@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import AuthenticationService from "./AuthenticationService";
+import AuthenticationService from "../../services/AuthenticationService";
 import {Link, withRouter } from  'react-router-dom'
 
-class HeaderComponent extends Component {
+class Header extends Component {
     render () {
         const isUserLoggedIn = AuthenticationService.isUserLoggedIn()
        //console.log(isUserLoggedIn)
@@ -23,4 +23,4 @@ class HeaderComponent extends Component {
         )
     }
 }
-export default withRouter(HeaderComponent)
+export default withRouter(Header)

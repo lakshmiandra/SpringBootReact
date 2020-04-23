@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import {Link} from  'react-router-dom'
 import HellowWorldService from '../../api/todo/HelloWorldService'
 
-class WelcomeComponent extends Component {
+class Dashboard extends Component {
 
     constructor(props) {
         super(props)
@@ -67,4 +67,4 @@ class WelcomeComponent extends Component {
     }
 }
 
-export default WelcomeComponent
+export default Dashboard

@@ -1,13 +1,13 @@
 import React, {Component} from 'react'
 import {BrowserRouter as Router, Route, Switch} from  'react-router-dom'
 import AuthenticatedRoute from './AuthenticatedRoute.jsx'
-import LoginComponent from './LoginComponent.jsx'
+import Login from '../login'
 import ListTodosComponent from './ListTodosComponent.jsx'
-import HeaderComponent from './HeaderComponent.jsx'
-import FooterComponent from './FooterComponent.jsx'
-import LogoutComponent from './LogoutComponent.jsx'
-import WelcomeComponent from './WelcomeComponent.jsx'
-import ErrorComponent from './ErrorComponent.jsx'
+import Header from '../header'
+import Footer from '../footer'
+import Logout from '../logout'
+import Dashboard from '../dashboard'
+import Error from '../error'
 import TodoComponent from './TodoComponent.jsx'
 
 
@@ -17,17 +17,17 @@ class TodoApp extends Component {
             <div className="TodoApp">
 
                 <Router>
-                    <HeaderComponent></HeaderComponent>
+                    <Header></Header>
                         <Switch>
-                            <Route path="/" exact component={LoginComponent}></Route>
-                            <Route path="/login" component={LoginComponent}></Route>
-                            <AuthenticatedRoute path="/welcome/:name" component={WelcomeComponent}></AuthenticatedRoute>
+                            <Route path="/" exact component={Login}></Route>
+                            <Route path="/login" component={Login}></Route>
+                            <AuthenticatedRoute path="/welcome/:name" component={Dashboard}></AuthenticatedRoute>
                             <AuthenticatedRoute path="/todos/:id" component={TodoComponent}></AuthenticatedRoute>
                             <AuthenticatedRoute path="/todos" component={ListTodosComponent}></AuthenticatedRoute>
-                            <AuthenticatedRoute path="/logout" component={LogoutComponent}></AuthenticatedRoute>
-                            <Route component={ErrorComponent}></Route>
+                            <AuthenticatedRoute path="/logout" component={Logout}></AuthenticatedRoute>
+                            <Route component={Error}></Route>
                         </Switch>
-                    <FooterComponent></FooterComponent>
+                    <Footer></Footer>
                 </Router>
                 {/* <LoginComponent></LoginComponent>
                 <WelcomeComponent></WelcomeComponent> */}
