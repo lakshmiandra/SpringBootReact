@@ -8,9 +8,9 @@ class AuthenticationService {
         return axios.get(`${API_URL}/basicAuth`, {headers:{authorization:this.createBasicAuthToken(userName, password)}})
     }
 
-    executeJwtAuthentication (username,password) {
+    executeJwtAuthentication (userName,password) {
         return axios.post(`${API_URL}/authenticate`, {
-            username,
+            userName,
             password
         })
     } 
