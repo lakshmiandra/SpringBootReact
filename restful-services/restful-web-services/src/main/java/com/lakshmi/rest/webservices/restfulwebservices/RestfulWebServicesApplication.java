@@ -16,7 +16,7 @@ import com.lakshmi.rest.webservices.restfulwebservices.jwt.repository.UserReposi
 @SpringBootApplication
 public class RestfulWebServicesApplication {
 
-	@Autowired
+/*	@Autowired
 	private UserRepository repository;
 
 	@PostConstruct
@@ -28,7 +28,7 @@ public class RestfulWebServicesApplication {
 				new User(104, "user3", "pwd3", "user3@gmail.com")
 				).collect(Collectors.toList());
 		repository.saveAll(users);
-	}
+	}*/
 
 	public static void main(String[] args) {
 		SpringApplication.run(RestfulWebServicesApplication.class, args);
